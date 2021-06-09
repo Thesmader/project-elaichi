@@ -18,7 +18,8 @@ import 'package:stacked_themes/stacked_themes.dart';
     MaterialRoute(page: ClubView),
     MaterialRoute(page: ViewEvent),
     MaterialRoute(page: SigninView),
-    MaterialRoute(page: SignupView)
+    MaterialRoute(page: SignupView),
+    MaterialRoute(page: StoryView),
   ],
   dependencies: [
     LazySingleton(classType: FakeApi, asType: Api, environments: {Env.dev}),
@@ -54,6 +55,8 @@ class ElaichiApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           localizationsDelegates: context.localizationDelegates,
+          locale: context.locale,
+          supportedLocales: context.supportedLocales,
           title: LocaleKeys.appName.tr(),
           theme: regularTheme,
           darkTheme: darkTheme,

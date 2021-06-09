@@ -6,3 +6,4 @@ export 'src/ui/views/club/club_viewmodel.dart';
 export 'src/ui/views/feed/feed_viewmodel.dart';
 export 'src/ui/views/home/home_viewmodel.dart';
 export 'src/ui/views/startup/startup_viewmodel.dart';
+export 'src/ui/views/story/story_viewmodel.dart';

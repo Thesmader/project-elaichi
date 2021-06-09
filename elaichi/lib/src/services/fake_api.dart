@@ -1,3 +1,4 @@
+import 'package:elaichi/core.dart';
 import 'package:elaichi/datamodels.dart';
 import 'package:elaichi/services.dart';
 
@@ -8,51 +9,7 @@ import 'package:elaichi/services.dart';
 class FakeApi implements Api {
   @override
   Future<List<CurrentStory>> getCurrentStories() {
-    final story = CurrentStory(
-        id: '1',
-        club: Club(
-          clubName: 'DesignTab',
-          id: '1',
-          facAd: 'Prof. ABC',
-          society: 'Technical Society',
-          domain: 'desgintab.com',
-          theme: ViewTheme(
-              backgroundColor: '2D3077',
-              logo: 'assets/images/dt.png',
-              name: 'DesignTab'),
-          contactInfo: [],
-          description: '',
-          members: [],
-        ),
-        event: Event(
-          organizer: Club(
-              facAd: '',
-              description: '',
-              id: '',
-              domain: '',
-              contactInfo: <ContactInfo>[],
-              members: <AccessLevel>[],
-              clubName: '',
-              society: '',
-              theme: ViewTheme(name: '', backgroundColor: '', logo: '')),
-          endDateTime: DateTime.now(),
-          otherDescription: '',
-          attendees: <User>[],
-          startDateTime: DateTime.now(),
-          announcements: '',
-          picture: '',
-          id: '',
-          location: '',
-          eventName: '',
-          registrationPrice: 0,
-          registrationCount: 0,
-          link: '',
-        ),
-        assetType: 'image',
-        createdAt: DateTime(2021, 1, 31),
-        asset: 'assetUrl',
-        description: 'Description');
-    return Future.value(List<CurrentStory>.generate(10, (index) => story));
+    return Future.value(Fixtures.storyList(7));
   }
 
   @override

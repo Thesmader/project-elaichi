@@ -39,6 +39,10 @@ class StartupView extends StatelessWidget {
               ElevatedButton(
                 onPressed: () => model.getMailData(),
                 child: const Text('print mail data'),
+              ),
+              ElevatedButton(
+                onPressed: () => model.navigateToStoryView(),
+                child: const Text('Open Story View'),
               )
             ],
           ),

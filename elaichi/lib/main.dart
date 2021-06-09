@@ -22,6 +22,8 @@ Future<void> main() async {
     EasyLocalization(
       assetLoader: const CodegenLoader(),
       supportedLocales: const <Locale>[Locale('en')],
+      startLocale: const Locale('en'),
+      fallbackLocale: const Locale('en'),
       path: 'assets/translations',
       child: const ElaichiApp(),
     ),

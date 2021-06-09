@@ -10,6 +10,7 @@ export 'src/app/failure.dart';
 export 'src/app/icons.dart';
 export 'src/app/locator.dart';
 export 'src/app/logger.dart';
+export 'src/app/utils/fixtures.dart';
 export 'src/app/utils/measurements.dart';
 export 'src/app/utils/no_over_scroll.dart';
 export 'src/app/utils/strings.dart';

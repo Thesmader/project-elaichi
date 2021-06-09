@@ -14,3 +14,4 @@ export 'src/ui/views/pageview/elaichi_page_view.dart';
 export 'src/ui/views/signin/signin_view.dart';
 export 'src/ui/views/signup/signup_view.dart';
 export 'src/ui/views/startup/startup_view.dart';
+export 'src/ui/views/story/story_view.dart';

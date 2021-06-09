@@ -16,19 +16,25 @@ class StartupViewModel extends BaseViewModel {
   /// Returns [_title] value.
   String get title => _title;
 
-  final NavigationService? _navigationService = locator<NavigationService>();
+  final NavigationService _navigationService = locator<NavigationService>();
 
   /// Navigates to HomeView.
   Future navigateToHome() async {
     log.i('Navigate to Home');
     //await _navigationService.navigateTo(Routes.homeView);
-    await _navigationService!.navigateTo(Routes.signinView);
+    await _navigationService.navigateTo(Routes.signinView);
   }
 
   /// Navigate to ClubView.
   Future navigateToClubPage() async {
     log.i('Navigate to Clubs page');
-    await _navigationService!.navigateTo(Routes.clubView);
+    await _navigationService.navigateTo(Routes.clubView);
+  }
+
+  /// Navigate to StoryView.
+  Future navigateToStoryView() async {
+    log.i('Navigate to story view');
+    await _navigationService.navigateTo(Routes.storyView);
   }
 
   /// Toggles between light and dark themes.
@@ -48,6 +54,7 @@ class StartupViewModel extends BaseViewModel {
     }
   }
 
+  /// Fetches and prints mail data.
   void getMailData() async {
     final logger = getLogger('Mail-data');
     const platform = MethodChannel('org.dscnitourkela.elaichi');
